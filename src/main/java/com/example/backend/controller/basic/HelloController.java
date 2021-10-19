@@ -11,16 +11,17 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/hello")
 public class HelloController {
 
-  private static String serverId;
-  @Autowired ApplicationArguments args;
+    private static String serverId;
+    @Autowired
+    ApplicationArguments args;
 
-  @RequestMapping("/world")
-  String home() {
-    return "Hello World";
-  }
+    @RequestMapping("/world")
+    String home() {
+        return "Hello World";
+    }
 
-  @RequestMapping("/server")
-  public String server(HttpServletRequest request) {
-    return "Hello from server : " + args.getSourceArgs()[0];
-  }
+    @RequestMapping("/server")
+    public String server(HttpServletRequest request) {
+        return "Hello from server : " + args.getSourceArgs()[0];
+    }
 }
